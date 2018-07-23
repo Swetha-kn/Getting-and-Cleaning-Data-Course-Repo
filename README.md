@@ -1,2 +1,2 @@
 # Getting-and-Cleaning-Data-Course-Repo
-Repo for Getting and Cleaning Data Course project
+This repo explains how all of the scripts work and how they are connected.
