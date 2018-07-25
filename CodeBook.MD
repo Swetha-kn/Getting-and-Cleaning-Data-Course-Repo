@@ -21,12 +21,35 @@ For each record in the dataset it is provided:
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
 
-## Step1: Merges the training and the test sets to create one data set
+# Step 1: Merges the training and the test sets to create one data set
 
-## Step2: Extracts only the measurements on the mean and standard deviation for each measurement
+1. After setting the source directory for the files, read into tables the data located in
+features.txt
+activity_labels.txt
+subject_train.txt
+x_train.txt
+y_train.txt
+subject_test.txt
+x_test.txt
+y_test.txt
+2. Assign column names and 
+3. merge to create one data set.
 
-## Step3: Uses descriptive activity names to name the activities in the data set
+# Step 2: Extracts only the measurements on the mean and standard deviation for each measurement
+1. Create a logical Vector that contains TRUE values for the ID, mean() & stddev() columns and FALSE for others
+2. Subset Final Dataset table based on the logical Vector to keep only desired columns
 
-## Step4: Appropriately labels the data set with descriptive variable names
+# Step 3: Uses descriptive activity names to name the activities in the data set
+1. Merge the Final Dataset table set with the acitivityType table to include descriptive activity names
 
-## Step5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+# Step 4: Appropriately labels the data set with descriptive variable names
+1. save the column names to a vector
+2. using for loop and the length of column counts assign the descriptive vaiable names
+3. reassign the changed column names to Final Dataset column names
+
+# Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+1. Melt the dataset to make it skinny by activity and each subject
+2. dcast the melted dataset to get the average of each variable for each activity and each subject
+
+# Step 6: write the tidy dataset to a csv file
+1. Save the tiday dataset in the working directory.
