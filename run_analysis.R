@@ -20,7 +20,7 @@
 # 1.  Merges the training and the test sets to create one data set.
 
 #setwd to source folder
-setwd("~/Documents/swetha/Learning/Data_Science")
+setwd("~/Documents/swetha/Learning/Data_Science/Samsung data")
 features     = read.table("./UCI HAR Dataset/features.txt",header=FALSE) #imports features.txt
 activityType = read.table("./UCI HAR Dataset/activity_labels.txt",header=FALSE) #imports activity_labels.txt
 
