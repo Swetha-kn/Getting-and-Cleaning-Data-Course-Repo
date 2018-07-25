@@ -99,5 +99,5 @@ melted <- melt(Final_DT, id=c("subjectId","activityType"))
 #dcast the melted dataset to get the average of each variable for each activity and each subject
 tidy_DT <- dcast(melted, subjectId+activityType ~ variable, mean)
 
-# write the tidy dataset to a csv file
-write.table(tidy_DT, './tidyData.csv',row.names=TRUE,col.names = TRUE, sep='\t')
+# write the tidy dataset to a txt file
+write.table(tidy_DT, './tidyData.txt',row.names=FALSE, sep='\t')
